@@ -30,32 +30,34 @@
                 <tr>
                     <th>Откуда</th>
                     <th>Куда</th>
-                    <th>Стоимость, руб.</th>
+                    <th>Стоимость, руб</th>
                     <th>Автобус</th>
-                    <th>Номер</th>
+                    <th>№</th>
                 </tr>
                 <tr style="text-align: center">
                     <td><input type="text" name="from" maxlength="20" style="width: 80px"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><input type="text" name="where" maxlength="20" style="width: 80px"></td>
+                    <td><input type="text" name="money" maxlength="20" style="width: 40px"></td>
+                    <td><select name="selectbus[]"><?php  $buszapros = mysql_query("select * from BUSES");
+                        while ($data = mysql_fetch_array($buszapros)) {
+                        ?><option><?php echo $data['MARKA'];echo ' ';echo $data['MESTA'];?> </option><?
+                        }?></select></td>
+                    <td><input type="text" name="nomer" maxlength="20" style="width: 30px"></td>
+                    <td><input type="button" name="add" value="add" maxlength="20"></td>
                 </tr>
-                <?php $buszapros = mysql_query("select * from BUSES");
-                while ($data = mysql_fetch_array($buszapros)) {
-                ?>
                 <tr style="text-align: center">
-                    <td><? echo $data['MARKA']; ?></td>
-                    <td><? echo $data['MESTA']; ?></td>
-                    <td>
-                        <input type="submit" name="<? echo $data['ID_BUS'] ?>" value="delete!">
-                        <?php
-                        if (isset($_POST[$data['ID_BUS']])) {
-                            $query = 'delete from BUSES where ID_BUS = ' . $data['ID_BUS'] . ' ';
-                            mysql_query($query);
-                        } ?>
-                    </td>
-                    <? }
-                    ?>
+                    <td><input type="button"></td>
+                    <td><input type="button"></td>
+                    <td><input type="button"></td>
+                    <td><input type="button"></td>
+                    <td><input type="button"></td>
+                </tr>
+                <tr style="text-align: center">
+                    <td><</td>
+                    <td><</td>
+                    <td><</td>
+                    <td><</td>
+                    <td><</td>
                 </tr>
             </table>
         </form>
