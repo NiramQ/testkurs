@@ -51,14 +51,21 @@
                     <td><input type="button"></td>
                     <td><input type="button"></td>
                     <td><input type="button"></td>
+                    <td>Сортировка</td>
                 </tr>
+                <?php
+                $waysszapros = mysql_query("select * from WAYS");
+                while ($data = mysql_fetch_array($waysszapros)){
+                    ?>
                 <tr style="text-align: center">
-                    <td><</td>
-                    <td><</td>
-                    <td><</td>
-                    <td><</td>
-                    <td><</td>
+                    <td><? echo $data['CITY_A']; ?></td>
+                    <td><? echo $data['CITY_B']; ?></td>
+                    <td><? echo $data['MONEY']; ?></td>
+                    <td><? echo "BUS" ?></td>
+                    <td><? echo $data['NOMER']; ?></td>
+                    <td><input type="button" value="del"></td>
                 </tr>
+                <?php } ?>
             </table>
         </form>
     </div>
