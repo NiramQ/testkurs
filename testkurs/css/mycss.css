@@ -1,0 +1,64 @@
+#header {
+    height: 80px; /* Высота слоя */
+    background: #4be3fe; border-bottom: 2px solid #40ddff;
+    text-align: center;
+}
+
+#menu{
+
+}
+
+#user{
+    margin: 0px;
+    border: solid 1px #000000;
+    background: #40ddff;
+}
+
+span{
+    background-image: url("../images/222.png");
+}
+
+#content {
+    background: #3dcced;
+    height: 800px;
+    top: 100px;
+}
+
+#footer{
+
+}
+a {
+    background-image: url('../images/111.png') ;
+}
+body {
+    margin: 0px;
+    width: auto;
+    min-width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+ }
+.copyright {
+    text-align: center;
+    position: static;
+    bottom: auto;
+}
+ul.hr {
+    margin: 0px; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    padding: 3px; /* Поля вокруг текста */
+    background-image: url('../images/111.png');
+}
+#bus{
+    margin-left: 5%;
+}
+
+#ways{
+    margin-left: 5%;
+}
+
+#times{
+    margin-left: 5%;
+}
