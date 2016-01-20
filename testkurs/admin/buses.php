@@ -37,7 +37,7 @@
                     <td><input type="text" name="busv" maxlength="3" style="width: 20px"></td>
                     <td><input name="submit"
                                value="add" class="button"
-                               type="submit">  <?php if (isset($_POST['submit']) & ($_POST['busv']) != 0 & isset($_POST['busmarka']) != 0) {
+                               type="submit">  <?php if (isset($_POST['submit']) & isset($_POST['busv']) != null & ($_POST['busmarka']) != null) {
                         $add = mysql_query("insert into BUSES (MARKA, MESTA) values ('" . $_POST['busmarka'] . "', '" . $_POST['busv'] . "')");
                         ?></td>
                     <td> <?php if ($add == true) {
@@ -55,7 +55,7 @@
                     <td><? echo $data['MARKA']; ?></td>
                     <td><? echo $data['MESTA']; ?></td>
                     <td>
-                            <input type="submit" name="<? echo $data['ID_BUS'] ?>" value="delete!">
+                            <input type="submit" name="" value="delete!">
                             <?php
                             if (isset($_POST[$data['ID_BUS']])) {
                                 $query = 'delete from BUSES where ID_BUS = ' . $data['ID_BUS'] . ' ';
